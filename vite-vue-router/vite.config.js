@@ -12,6 +12,10 @@ export default defineConfig({
   root: "../",
   base: "/x/d/",
   publicDir: "./vite-vue-router/static/",
+  define: {
+    APP_NAME: JSON.stringify('test-vite-ie11'),
+    NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+  },
   plugins: [
     vue(),
     scssFormat(),

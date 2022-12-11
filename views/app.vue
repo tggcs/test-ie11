@@ -28,6 +28,10 @@
                 <br /> <label>::v-deep: 橙色</label>
             </p>
         </div>
+        <hr>
+        <div>
+            <button @click="conGlobalEnv">测试全局变量</button>
+        </div>
     </div>
 </template>
 
@@ -70,6 +74,10 @@ export default {
         },
         testProxy() {
             this.decimalNum = new Decimal('0.1').sub(new Decimal('0.2'))
+        },
+        conGlobalEnv() {
+            console.log('APP_NAME', APP_NAME)
+            console.log('NODE_ENV', NODE_ENV)
         }
     }
 }
