@@ -11,6 +11,7 @@ const resolve = (dir) => path.resolve(__dirname, dir);
 export default defineConfig({
   root: "../",
   base: "/x/d/",
+  publicDir: "./vite-vue-router/static/",
   plugins: [
     vue(),
     scssFormat(),
