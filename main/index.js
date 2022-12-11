@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from 'VIEWS/app.vue'
-// import App from '../views/app.vue'
+import '../scss/index.scss'
 
 import router from 'VVR/router'
 

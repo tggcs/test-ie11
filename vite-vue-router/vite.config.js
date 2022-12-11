@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue2'
 import path from 'path';
+import scssFormat from './plugins/vite-plugin-scss-format'
 
 const resolve = (dir) => path.resolve(__dirname, dir);
 // console.log(resolve('../'))
@@ -12,6 +13,7 @@ export default defineConfig({
   base: "/x/d/",
   plugins: [
     vue(),
+    scssFormat(),
     legacy({
       targets: ['defaults', 'ie >= 11'],
     }),

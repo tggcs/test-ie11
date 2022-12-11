@@ -19,6 +19,15 @@
             测试proxy:
             <p>{{ decimalNum }}</p>
         </div>
+        <hr>
+        <div>
+            测试scss:
+            <p class="test-scss-common">颜色测试1</p>
+            <p class="test-scss-2">颜色测试2
+                <br /> <span>/deep/: 黄色(代码强行改写)</span>
+                <br /> <label>::v-deep: 橙色</label>
+            </p>
+        </div>
     </div>
 </template>
 
@@ -65,3 +74,17 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.test-scss-2 {
+    border: 2px solid gray;
+    color: #96f;
+
+    /deep/ span {
+        color: yellow;
+    }
+    ::v-deep label {
+        color: orange;
+    }
+}
+</style>
