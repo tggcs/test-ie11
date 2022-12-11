@@ -16,6 +16,9 @@ export default defineConfig({
     APP_NAME: JSON.stringify('test-vite-ie11'),
     NODE_ENV: JSON.stringify(process.env.NODE_ENV)
   },
+  build: {
+    outDir: 'iePackage',
+  },
   plugins: [
     vue(),
     scssFormat(),
