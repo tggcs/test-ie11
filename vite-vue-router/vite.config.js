@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue2'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path';
 import scssFormat from './plugins/vite-plugin-scss-format'
 
@@ -25,6 +26,11 @@ export default defineConfig({
     legacy({
       targets: ['defaults', 'ie >= 11'],
     }),
+    viteStaticCopy({
+      targets: [
+        { src: resolve('../temp/*'), dest: resolve('../iePackage') }
+      ]
+    })
   ],
   resolve: {
     alias: {

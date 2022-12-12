@@ -16,6 +16,7 @@
   "dependencies": {
     "@vitejs/plugin-legacy": "^3.0.1",
     "@vitejs/plugin-vue2": "^2.2.0",
-    "object-assign-deep": "^0.4.0"
+    "object-assign-deep": "^0.4.0",
+    "vite-plugin-static-copy": "^0.13.0"
   }
 }
