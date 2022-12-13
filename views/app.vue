@@ -32,6 +32,14 @@
         <div>
             <button @click="conGlobalEnv">测试全局变量</button>
         </div>
+        <hr>
+        <div>
+            全局变量(VITE_IE)读取: <span>{{ isInIe }}</span>
+        </div>
+        <hr>
+        <div>
+            // ie-ignore标记测试：
+        </div>
     </div>
 </template>
 
@@ -50,13 +58,17 @@ export default {
 
         this.testModules()
         this.testProxy()
+        // ie-ignore-s
+        console.log("test ie-ignore")
+        // ie-ignore-e
     },
     data() {
         return {
             name: "tg test",
             res: 0,
             assignData: {},
-            decimalNum: 0
+            decimalNum: 0,
+            isInIe: VITE_IE
         }
     },
     methods: {

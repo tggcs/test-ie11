@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue2'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path';
 import scssFormat from './plugins/vite-plugin-scss-format'
+import ieIgnoreFormat from './plugins/vite-plugin-ie-ignore'
 
 const resolve = (dir) => path.resolve(__dirname, dir);
 // console.log(resolve('../'))
@@ -15,7 +16,8 @@ export default defineConfig({
   publicDir: "./vite-vue-router/static/",
   define: {
     APP_NAME: JSON.stringify('test-vite-ie11'),
-    NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+    NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    VITE_IE: JSON.stringify("true")
   },
   build: {
     outDir: 'iePackage',
@@ -23,6 +25,7 @@ export default defineConfig({
   plugins: [
     vue(),
     scssFormat(),
+    ieIgnoreFormat(),
     legacy({
       targets: ['defaults', 'ie >= 11'],
     }),
