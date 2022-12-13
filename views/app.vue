@@ -34,7 +34,7 @@
         </div>
         <hr>
         <div>
-            全局变量(VITE_IE)读取: <span>{{ isInIe }}</span>
+            全局变量读取: <span>{{ isInIe }}</span>
         </div>
         <hr>
         <div>

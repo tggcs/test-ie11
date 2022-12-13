@@ -16,7 +16,7 @@ export default function ieIgnoreFormatPlugin() {
         return code
       }
 
-      console.log(id , replaceIeIgnore(code))
+      // console.log(id , replaceIeIgnore(code))
       return replaceIeIgnore(code)
 
     }
